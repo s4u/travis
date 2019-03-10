@@ -7,5 +7,6 @@ install: true
 
 script:
   - sh -n src/*.sh      # check syntax of scripts
+  - src/mvn-run.sh  -v  # execute always
   - src/mvn-push.sh -v  # execute on push
   - src/mvn-pr.sh   -v  # execute on PR
