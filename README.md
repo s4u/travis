@@ -1,4 +1,5 @@
 # Travis simplify scripts
+[![Build Status](https://travis-ci.org/s4u/travis.svg?branch=master)](https://travis-ci.org/s4u/travis)
 
 Those scripts simplify your travis configuration.
 
