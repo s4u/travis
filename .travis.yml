@@ -1,7 +1,7 @@
 sudo: false
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk11
 
 install: true
 
@@ -10,3 +10,4 @@ script:
   - src/mvn-run.sh  -v  # execute always
   - src/mvn-push.sh -v  # execute on push
   - src/mvn-pr.sh   -v  # execute on PR
+  - src/mvn-tag.sh   -v # execute on git tag

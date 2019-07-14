@@ -2,7 +2,8 @@
 
 Those scripts simplify your travis configuration.
 
-By default builds for **tags** are skipped.
+By default builds for **tags** are skipped,
+also commit with message contains `[maven-release-plugin] prepare release` are skipped
 
 ## Supplied maven settings
 
@@ -28,8 +29,10 @@ Example of `.travis.yml` for the latest version of those scripts:
               | tar -zx --strip-components 2 -C ../utils travis-master/src
 
         script:
-            - ../utils/mvn-push.sh clean deploy  # execute oonly n push
+            - ../utils/mvn-run.sh  clean verify  # execute always
+            - ../utils/mvn-push.sh clean deploy  # execute only on push
             - ../utils/mvn-pr.sh   clean verify  # execute only on pull request
+            - ../utils/mvn-tag.sh  clean verify  # execute on git tag
 
 for specific version, replace master on tag name:
 
