@@ -41,3 +41,14 @@ for specific version, replace master on tag name:
             - mkdir -p ../utils
             - curl -Ls https://github.com/s4u/travis/archive/1.0.tar.gz \
               | tar -zx --strip-components 2 -C ../utils travis-1.0/src
+
+## Travis environment operation on many repository
+
+Simple script to manipulate travis environment variable on many repository.
+
+
+example:
+
+        ./travis-env.sh <orgName>/* list
+        ./travis-env.sh <orgName>/* set NAME VALUE [travis OPTIONS]
+        ./travis-env.sh <orgName>/* unset NAMES.. [travis OPTIONS]

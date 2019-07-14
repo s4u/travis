@@ -6,6 +6,7 @@ jdk:
 install: true
 
 script:
+  - sh -n *.sh          # check syntax of scripts
   - sh -n src/*.sh      # check syntax of scripts
   - src/mvn-run.sh  -v  # execute always
   - src/mvn-push.sh -v  # execute on push
