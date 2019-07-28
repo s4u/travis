@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "$TRAVIS_TAG" ]; then
-    echo "$0 skip build - tag not found"
+    echo "tag not found - skip $0"
     exit 0
 fi
 
