@@ -5,6 +5,9 @@ jdk:
 
 install: true
 
+before_script:
+  - src/print-env.sh
+
 script:
   - sh -n *.sh          # check syntax of scripts
   - sh -n src/*.sh      # check syntax of scripts
