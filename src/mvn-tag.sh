@@ -5,9 +5,7 @@ if [ -z "$TRAVIS_TAG" ]; then
     exit 0
 fi
 
-BASE_DIR=`dirname $0`
+_NEED_TAG=1
 
-MVN_TO_RUN="mvn --errors --show-version --settings $BASE_DIR/settings.xml $@"
-echo "Run: $MVN_TO_RUN"
+. `dirname $0`/mvn-run.sh $@
 
-$MVN_TO_RUN

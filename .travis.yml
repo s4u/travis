@@ -15,3 +15,4 @@ script:
   - src/mvn-push.sh -v  # execute on push
   - src/mvn-pr.sh   -v  # execute on PR
   - src/mvn-tag.sh   -v # execute on git tag
+  - TRAVIS_TAG=test src/mvn-tag.sh -v # test execute on tag
