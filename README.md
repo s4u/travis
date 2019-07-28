@@ -34,6 +34,7 @@ Example of `.travis.yml` for the latest version of those scripts:
             - ../utils/mvn-push.sh clean deploy  # execute only on push
             - ../utils/mvn-pr.sh   clean verify  # execute only on pull request
             - ../utils/mvn-tag.sh  clean verify  # execute on git tag
+            - ../utils/mvn-sec-env.sh deploy     # execute if build is run in secure environment
 
 for specific version, replace master on tag name:
 
@@ -45,7 +46,6 @@ for specific version, replace master on tag name:
 ## Travis environment operation on many repository
 
 Simple script to manipulate travis environment variable on many repository.
-
 
 example:
 
