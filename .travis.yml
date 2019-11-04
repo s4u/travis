@@ -22,3 +22,4 @@ script:
   - TRAVIS_TAG=test src/mvn-tag.sh -v # test execute on tag
   - TRAVIS_TAG=test src/mvn-run.sh -v # test no execute on tag
   - src/mvn-sec-env.sh -v # execute if build is run in secure environment
+  - src/mvn-sonar.sh -v # test sonar env
