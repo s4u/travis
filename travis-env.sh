@@ -13,6 +13,13 @@ if [ "$#" -lt 2 ]; then
     show_help
 fi
 
+if [ "$1" = "--org" ]; then
+    API="--org"
+    shift
+else
+    API="--com"
+fi
+
 MATCH=$1
 COMMAND=$2
 shift 2
@@ -27,4 +34,4 @@ case "$COMMAND" in
     *) show_help ;;
 esac
 
-travis repos --match $MATCH --active --no-interactive | xargs -n 1 travis env $COMMAND $@ --repo
+travis repos --match $MATCH --active --no-interactive $API | xargs -n 1 travis env $COMMAND $@ $API --repo
