@@ -3,6 +3,10 @@ language: java
 jdk:
   - openjdk11
 
+addons:
+  sonarcloud:
+    organization: "simplify4u"
+
 install: true
 
 before_script:
@@ -16,4 +20,5 @@ script:
   - src/mvn-pr.sh   -v  # execute on PR
   - src/mvn-tag.sh   -v # execute on git tag
   - TRAVIS_TAG=test src/mvn-tag.sh -v # test execute on tag
+  - TRAVIS_TAG=test src/mvn-run.sh -v # test no execute on tag
   - src/mvn-sec-env.sh -v # execute if build is run in secure environment
