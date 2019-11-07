@@ -5,7 +5,7 @@ if [ -z "$TRAVIS_TAG" ]; then
     exit 0
 fi
 
-_NEED_TAG=1
+_NO_SKIP=1
 
 . `dirname $0`/mvn-run.sh $@
 
