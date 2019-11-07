@@ -1,7 +1,5 @@
 #!/bin/sh
 
-_NO_SKIP=1
-
 if [ -z "$SONARQUBE_SCANNER_PARAMS" \
         -a ! "$TRAVIS_PULL_REQUEST" = "false" \
         -a -n "$TRAVIS_PULL_REQUEST_SLUG" \
