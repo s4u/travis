@@ -1,0 +1,8 @@
+# configure cache for maven
+
+cache:
+  directories:
+    - $HOME/.m2/repository
+
+before_cache:
+  - if [ -n "$M2_CACHE_CLEAN_DIR" ]; then rm -rfv $HOME/.m2/repository/$M2_CACHE_CLEAN_DIR; fi
