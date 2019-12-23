@@ -1,0 +1,13 @@
+# deploy maven site as GH pages
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  verbose: true
+  local_dir: target/site
+  on:
+    tags: true
+    jdk: openjdk8
+    condition: $MY_REPO = $TRAVIS_REPO_SLUG
