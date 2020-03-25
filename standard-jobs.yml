@@ -30,13 +30,3 @@ jobs:
       script:
         - ../utils/mvn-run.sh     clean verify
       if: repo != env(MY_REPO)
-
-    - name: "jdk11"
-      jdk: openjdk11
-      script:
-        - ../utils/mvn-run.sh     clean verify
-
-    - name: "jdk13"
-      jdk: openjdk13
-      script:
-        - ../utils/mvn-run.sh     clean verify
