@@ -9,10 +9,6 @@ branches:
 git:
   depth: false
 
-addons:
-  sonarcloud:
-    organization: $SONAR_ORG
-
 jobs:
   include:
 

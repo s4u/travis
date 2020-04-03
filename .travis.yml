@@ -3,10 +3,6 @@ language: java
 jdk:
   - openjdk11
 
-addons:
-  sonarcloud:
-    organization: "simplify4u"
-
 install: true
 
 before_script:
