@@ -12,8 +12,8 @@ git:
 jobs:
   include:
 
-    - name: "jdk14"
-      jdk: openjdk14
+    - name: "jdk11"
+      jdk: openjdk11
       script: >-
         ../utils/mvn-push.sh    clean deploy  &&
         ../utils/mvn-pr.sh      clean verify  &&
@@ -21,8 +21,8 @@ jobs:
         ../utils/mvn-sonar.sh   sonar:sonar
       if: repo = env(MY_REPO)
 
-    - name: "jdk14 - forks"
-      jdk: openjdk14
+    - name: "jdk11 - forks"
+      jdk: openjdk11
       script:
         - ../utils/mvn-run.sh     clean verify
       if: repo != env(MY_REPO)
