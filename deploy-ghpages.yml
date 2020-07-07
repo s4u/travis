@@ -9,5 +9,5 @@ deploy:
   local_dir: target/site
   on:
     tags: true
-    jdk: openjdk8
+    jdk: openjdk11
     condition: $MY_REPO = $TRAVIS_REPO_SLUG
