@@ -1,5 +1,10 @@
 # Travis simplify scripts
-[![Build Status](https://travis-ci.com/s4u/travis.svg?branch=master)](https://travis-ci.com/s4u/travis)
+
+# End of life
+**Beginning from 2021 this project will be no more maintenance by us.
+If you want you can adopt it - please contact by email.**
+
+---
 
 Those scripts simplify your travis configuration.
 
